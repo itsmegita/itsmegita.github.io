@@ -1,0 +1,435 @@
+:root {
+  --bg: #fffbe9;
+  --c1: #ad8b73;
+  --c2: #ceab93;
+  --c3: #e3caa5;
+  --border: 0.1rem solid var(--c1);
+  --box-shadow: 0 0.5rem 1rem var(--c3);
+}
+* {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+*::selection {
+  background-color: var(--c2);
+  color: #fffbe9;
+}
+
+::-webkit-scrollbar {
+  height: 0.5rem;
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--c3);
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+section {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--c2);
+  margin-top: 1rem;
+  cursor: pointer;
+  color: var(--bg);
+  font-size: 1.8rem;
+  padding: 1rem 3rem;
+}
+
+.btn:hover {
+  background-color: var(--c1);
+  color: var(--c3);
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--bg);
+  box-shadow: var(--c2);
+  z-index: 1000;
+}
+
+.header .flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 1.5rem 2rem;
+}
+
+.header .flex .logo img {
+  height: 4.5rem;
+}
+
+.header .flex .nav a {
+  margin: 2rem;
+  font-size: 2rem;
+  color: var(--c1);
+}
+
+.header .flex .nav a:hover {
+  text-decoration: underline;
+  color: var(--c3);
+}
+
+#tombol-menu {
+  display: none;
+  font-size: 2.5rem;
+  color: var(--c1);
+  cursor: pointer;
+}
+
+.h {
+  background: linear-gradient(90deg, #fff5ea, transparent 70%),
+    url(./gambar/bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.h .home {
+  min-height: 70rem;
+  display: flex;
+  align-items: center;
+}
+
+.h .home .content {
+  width: 50rem;
+  text-align: center;
+}
+
+.h .home .content h3 {
+  font-size: 6rem;
+  color: var(--c2);
+  font-family: "Dancing Script", cursive;
+}
+
+.h .home .content p {
+  padding: 1rem 0;
+  font-size: 1.6rem;
+  color: var(--c1);
+  line-height: 2;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.about .img_a img {
+  width: 100%;
+}
+
+.about .content {
+  flex: 1 1 40rem;
+}
+
+.about .content h3 {
+  font-size: 4.5rem;
+  color: var(--c1);
+  font-family: "Dancing Script", cursive;
+  padding-bottom: 1rem;
+}
+
+.about .content p {
+  padding: 1rem 0;
+  line-height: 2;
+  color: var(--c2);
+  font-size: 1.5rem;
+}
+
+.menu .heading img {
+  width: 50%;
+  margin-bottom: 1rem;
+}
+
+.menu .heading h3 {
+  font-size: 3rem;
+  color: var(--c2);
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-size: 4.5rem;
+  margin-bottom: 2rem;
+}
+
+.menu .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 30rem);
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.menu .box-container .box {
+  text-align: center;
+}
+
+.menu .box-container .box img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.menu .box-container .box h3 {
+  font-size: 2rem;
+  color: var(--c2);
+}
+
+.gallery .heading h3 {
+  font-size: 3rem;
+  color: var(--c2);
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-size: 4.5rem;
+  margin-bottom: 2rem;
+}
+
+.gallery .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 30rem);
+  gap: 2rem;
+  justify-content: center;
+}
+
+.gallery .box-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.team .heading h3 {
+  font-size: 3rem;
+  color: var(--c2);
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-size: 4.5rem;
+  margin-bottom: 2rem;
+}
+
+.team .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 20rem);
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.team .box-container .box {
+  text-align: center;
+}
+
+.team .box-container .box img {
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.team .box-container .box h3 {
+  font-size: 1.5rem;
+  color: var(--c2);
+}
+
+.contact .heading h3 {
+  font-size: 3rem;
+  color: var(--c2);
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-size: 4.5rem;
+  margin-bottom: 2rem;
+}
+
+.contact .row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.contact .row .image {
+  flex: 1 1 50rem;
+}
+
+.contact .row .image img {
+  width: 100%;
+}
+
+.contact .row form {
+  flex: 1 1 30rem;
+  border: var(--border);
+  padding: 2rem;
+  text-align: center;
+}
+
+.contact .row form h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--c2);
+}
+
+.contact .row form .box {
+  width: 100%;
+  padding: 1.4rem;
+  font-size: 1.8rem;
+  color: gray;
+  border: var(--border);
+  margin: 1rem 0;
+}
+
+.footer .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.footer .box-container .box {
+  text-align: center;
+}
+
+.footer .box-container .box i {
+  font-size: 2.5rem;
+  line-height: 6rem;
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  background-color: var(--bg);
+  color: var(--c2);
+  margin-bottom: 1rem;
+}
+
+.footer .box-container .box h3 {
+  margin: 1rem, 0;
+  font-size: 2rem;
+  color: var(--c1);
+}
+
+.footer .box-container .box p {
+  line-height: 2;
+  font-size: 1.6rem;
+  color: var(--c2);
+}
+
+.footer .credit {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2.5rem;
+  border-top: var(--border);
+  font-size: 2rem;
+  color: var(--c1);
+}
+
+.footer .credit span {
+  color: var(--c2);
+}
+
+/* media queries */
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 769px) {
+  #tombol-menu {
+    display: inline-block;
+    transition: 0.2s linear;
+  }
+
+  #tombol-menu.fa-times {
+    transform: rotate(180deg);
+  }
+
+  .header .flex .nav {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background-color: var(--bg);
+    border-top: var(--border);
+    border-bottom: var(--border);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: 0.2s linear;
+  }
+
+  .header .flex .nav.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .header .flex .nav a {
+    display: block;
+    margin: 2rem;
+  }
+
+  .h {
+    background-position: left;
+  }
+
+  .h .home {
+    justify-content: center;
+  }
+
+  .h .home .content h3 {
+    font-size: 4rem;
+  }
+
+  .about .content h3 {
+    font-size: 3rem;
+  }
+}
+
+/* Efek hover pada tombol */
+.btn:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Animasi muncul pada section */
+.section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Efek gambar membesar pada gallery */
+.gallery .box-container img {
+  transition: transform 0.3s ease;
+}
+
+.gallery .box-container img:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
